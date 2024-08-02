@@ -18,7 +18,7 @@ This project is a simple Spring MVC web application that allows users to perform
 How to Run
 Clone the Repository:
 Copy code
-git clone https://github.com/your-username/springmvcsearch.git
+git clone https://github.com/Myworldisjarvis/springmvcsearch.git
 cd springmvcsearch
 Import the Project:
 
