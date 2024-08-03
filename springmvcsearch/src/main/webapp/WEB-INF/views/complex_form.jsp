@@ -10,7 +10,7 @@
 
 <div class="container mt-4">
 <div class="row">
-<div class="col-md-6 offset-md-3">
+<div class="col-md-8 offset-md-2">
 <div class="card">
 <div class="card-body">
 
@@ -38,9 +38,9 @@
         <div class="form-group">
             <label for="course">Select Course</label>
             <select name="course" class="form-control" id="course" multiple>
-                <option value="course1">JAVA</option>
-                <option value="course2">Python</option>
-                <option value="course3">SQL</option>
+                <option>JAVA</option>
+                <option>Python</option>
+                <option>SQL</option>
             </select>
         </div>
 
@@ -66,8 +66,25 @@
             </select>
         </div>
 
+		<!-- User Address  -->
+		<div class="card">
+		<div class="card-body" >
+		<p>Your Address</p>
+		
+		<div class="form-grop">
+		<input name="address.street" type="text" class="form-control" placeholder="Enter Street" >
+		</div>
+		
+		<div class="form-grop">
+		<input name="address.city" type="text" class="form-control mt-2" placeholder="Enter City" >
+		</div>
+		
+		</div>
+		</div>
+
+
         <!-- Submit Button -->
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="text-center mt-3"> <button type="submit" class="btn btn-primary">Submit</button></div>
     </form>
 
 

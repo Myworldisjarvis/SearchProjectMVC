@@ -11,6 +11,16 @@ public class Student {
 	private List<String> course;
 	private String gender;
 	private String sType;
+	
+	private Address address;
+	
+	
+	public Address getAddress() {
+		return address;
+	}
+	public void setAddress(Address address) {
+		this.address = address;
+	}
 	public String getName() {
 		return name;
 	}
@@ -50,8 +60,10 @@ public class Student {
 	@Override
 	public String toString() {
 		return "Student [name=" + name + ", id=" + id + ", dob=" + dob + ", course=" + course + ", gender=" + gender
-				+ ", sType=" + sType + "]";
+				+ ", sType=" + sType + ", address=" + address + "]";
 	}
+	
+	
 	
 	
 	

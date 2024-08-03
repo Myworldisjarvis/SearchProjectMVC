@@ -8,8 +8,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>
-${student}
-</h1>
+<h2>Name is ${student.name}</h2>
+<h2>Id is ${student.id}</h2>
+<h2>DOB is ${student.dob}</h2>
+<h2>Courses is ${student.course}</h2>
+<h2>Gender is ${student.gender}</h2>
+<h2>Student Type is ${student.sType}</h2>
+<h2>Student street is ${student.address.street}</h2>
+<h2>Student city ${student.address.city}</h2>
 </body>
 </html>
