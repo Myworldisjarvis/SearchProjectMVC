@@ -1,11 +1,13 @@
-package springmvcsearch;
+  package springmvcsearch;
 
+import java.io.File;
 import java.io.FileOutputStream;
 
 import javax.annotation.processing.SupportedSourceVersion;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -20,7 +22,7 @@ public class FileUploadController {
 	}
 	
 	@RequestMapping(value="/uploadimage", method = RequestMethod.POST)
-	public String fileUpload(@RequestParam("profile") CommonsMultipartFile file , HttpSession s) {
+	public String fileUpload(@RequestParam("profile") CommonsMultipartFile file , HttpSession s , Model m) {
 			System.out.println(file.getSize()); 
 			System.out.println(file.getContentType());
 			System.out.println(file.getName());
@@ -30,16 +32,19 @@ public class FileUploadController {
 			byte[] bytes = file.getBytes();
 //			we have to save file to server
 			
-			String path = s.getServletContext().getRealPath("/")+file.getOriginalFilename();
-			
+			String path = s.getServletContext().getRealPath("/")+"WEB-INF"+File.separator+"resources"+File.separator+"images"+File.separator+file.getOriginalFilename();
+			System.out.println(path);
 			try {
 				FileOutputStream fos = new FileOutputStream(path);
 				fos.write(bytes);
 				fos.close();
 				System.out.println("file uploaded");
+				m.addAttribute("msg","uploded");
+				m.addAttribute("filename",file.getOriginalFilename());
 			} catch (Exception e) {
 				e.printStackTrace();
 				System.out.println("uploading error");
+				m.addAttribute("msg","uploded error");
 			}
 			
 			

@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    
     <%@page isELIgnored="false" %>
 <!DOCTYPE html>
 <html>
@@ -16,5 +18,7 @@
 <h2>Student Type is ${student.sType}</h2>
 <h2>Student street is ${student.address.street}</h2>
 <h2>Student city ${student.address.city}</h2>
+<h1>${msg }</h1>
+<img alt="image" src="<c:url value="/resources/images/${filename}" />">
 </body>
 </html>
